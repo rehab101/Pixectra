@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+    <resources>
+
+    <!-- Base application theme. -->
+
+
+
+    -<style parent="Theme.AppCompat.Light.DarkActionBar" name="LibAppTheme">
+
+    <!-- Customize your theme here. -->
+
+
+    <item name="colorPrimary">@color/colorPrimary</item>
+
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+    <item name="colorAccent">@color/colorAccent</item>
+
+    <item name="android:colorBackground">@android:color/background_light</item>
+
+    <item name="android:windowBackground">@color/bg_gray</item>
+
+</style>
+
+    <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
+
+</resources>

@@ -54,4 +54,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="ADD PHOTOS"
+        android:layout_marginTop="10dp"
+     android:layout_centerHorizontal="true"
+        android:id="@+id/button"
+        android:textSize="16dp"
+        android:layout_below="@+id/textView3"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_dark"
+    />
+
 </RelativeLayout>

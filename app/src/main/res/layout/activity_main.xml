@@ -16,33 +16,32 @@
     <Button
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
 
-        android:background="@null"
+        android:background="#3cb371"
         android:text="@string/next"
-        android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="70dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btn_skip"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:background="@null"
         android:text="@string/skip"
         android:textColor="@android:color/holo_red_dark"
         android:textAllCaps="false"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
     <LinearLayout
         android:id="@+id/layoutDots"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dots_height"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="37dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
@@ -54,7 +53,7 @@
         android:layout_height="1dp"
         android:alpha=".5"
         android:layout_above="@+id/layoutDots"
-        android:background="@android:color/white" />
+        />
 
 
 </RelativeLayout>

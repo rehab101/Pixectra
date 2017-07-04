@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "428021915307",
+    "firebase_url": "https://pixectra-e7be3.firebaseio.com",
+    "project_id": "pixectra-e7be3",
+    "storage_bucket": "pixectra-e7be3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428021915307:android:b5cd0530c4daa985",
+        "android_client_info": {
+          "package_name": "com.vikky.picx.pixectra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428021915307-9atiu5ods5brjvae2uje0muircd6di7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmGRWmnyO3eQxDm5kyYjcAxse6YcZimqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

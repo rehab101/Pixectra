@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <ScrollView android:background="@drawable/doodle" android:fitsSystemWindows="true" android:layout_height="fill_parent" android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingRight="24dp" android:paddingLeft="24dp" android:paddingTop="51dp" android:orientation="vertical">
+
+    <ImageView android:layout_height="150dp" android:layout_width="wrap_content"
+        android:src="@drawable/first" android:layout_marginBottom="24dp" android:layout_gravity="center_horizontal"
+        android:id="@+id/imageView"/>
+
+    <!-- Email Label -->
+
+
+
+    -<android.support.design.widget.TextInputLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
+
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/input_email" android:hint="Email" android:inputType="textEmailAddress"/>
+
+</android.support.design.widget.TextInputLayout>
+
+    <!-- Password Label -->
+
+
+
+    <android.support.design.widget.TextInputLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
+
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/input_password" android:hint="Password" android:inputType="textPassword"/>
+
+</android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_marginBottom="10dp" android:id="@+id/btn_login" android:layout_marginTop="10dp" android:text="Login" android:padding="12dp"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="5dp" android:layout_marginTop="5dp" android:text="OR" android:gravity="center" android:textSize="15dp"/>
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+
+    <ImageView android:layout_height="55dp" android:layout_width="wrap_content" android:src="@drawable/facebooliconn" android:layout_marginBottom="10dp" android:layout_gravity="center_horizontal" android:layout_weight="50" android:layout_marginLeft="80dp"/>
+
+    <ImageView android:layout_height="55dp" android:layout_width="wrap_content" android:src="@drawable/facebooliconn" android:layout_marginBottom="10dp" android:layout_gravity="center_horizontal" android:layout_weight="50" android:layout_marginRight="80dp"/>
+
+</LinearLayout>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_marginBottom="24dp" android:id="@+id/link_signup" android:text="newuser" android:gravity="center" android:textSize="15dip" android:clickable="true"/>
+
+</LinearLayout>
+
+</ScrollView>

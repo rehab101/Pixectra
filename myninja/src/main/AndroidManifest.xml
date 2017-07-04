@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myninja">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application android:supportsRtl="true" android:allowBackup="true">
+
+    <activity android:name=".FilePickerActivity" />
+
+    <activity android:name=".MediaDetailsActivity" />
+
+
+    -<provider android:name=".utils.FilePickerProvider" android:grantUriPermissions="true" android:exported="false"
+        android:authorities="${applicationId}.example.myninja.provider">
+
+    <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+
+</provider>
+
+</application>
+
+</manifest>
