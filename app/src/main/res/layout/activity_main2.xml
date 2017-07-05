@@ -7,64 +7,67 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#e0eee0"
+    android:background="#ffdead"
     >
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="January"
-        android:textAlignment="center"
-        android:textSize="50dp"
-        android:background="@color/colorAccent"
-        android:textColor="#ffffff"
-        android:id="@+id/textView"
-        android:textStyle="bold"
-        android:layout_marginTop="118dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="23"
-        android:textStyle="bold"
-        android:textSize="65dp"
-        android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tuesday-2017"
         android:textSize="30dp"
+        android:textColor="@android:color/black"
         android:id="@+id/textView3"
-        android:layout_below="@+id/textView2"
+        android:layout_above="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/heartsframe"
+android:layout_centerInParent="true"
+        />
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="ADD PHOTOS"
+        android:id="@+id/button"
+        android:textSize="16dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_dark"
+        android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="order print now"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
         android:id="@+id/textView4"
-        android:textSize="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+android:layout_below="@+id/textView3"
+        android:layout_marginTop="40dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginLeft="110dp" />
 
-    <Button
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:text="ADD PHOTOS"
-        android:layout_marginTop="10dp"
-     android:layout_centerHorizontal="true"
-        android:id="@+id/button"
-        android:textSize="16dp"
-        android:layout_below="@+id/textView3"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_green_dark"
-    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/textView4"
+        android:text="Medium Text"
+        android:id="@+id/textView5"
+android:layout_marginLeft="110dp"
+        android:layout_centerVertical="true"
+         />
+
+    <ProgressBar
+        android:layout_width="190dp"
+        android:layout_height="20dp"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@+id/textView3" />
 
 </RelativeLayout>

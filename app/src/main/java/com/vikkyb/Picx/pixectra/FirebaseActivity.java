@@ -89,7 +89,7 @@ public class FirebaseActivity extends AppCompatActivity implements View.OnClickL
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             filePath = data.getData();
-            CropImage.activity(filePath).setGuidelines(CropImageView.Guidelines.ON).setAspectRatio(1,1).start(this);
+            CropImage.activity(filePath).setGuidelines(CropImageView.Guidelines.ON).setAspectRatio(3,2).start(this);
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 imageView.setImageBitmap(bitmap);

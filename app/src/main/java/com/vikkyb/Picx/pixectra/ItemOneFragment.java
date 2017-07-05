@@ -27,6 +27,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.Format;
@@ -36,7 +37,7 @@ import java.util.Date;
 public class ItemOneFragment extends Fragment {
     TextView t1, t2, t3, t4;
     Button b1;
-
+ImageView imageView;
     public static ItemOneFragment newInstance() {
         ItemOneFragment fragment = new ItemOneFragment();
         return fragment;
@@ -54,21 +55,19 @@ public class ItemOneFragment extends Fragment {
 
 
         b1 = (Button) view.findViewById(R.id.button);
-        t1 = (TextView) view.findViewById(R.id.textView);
-        t2 = (TextView) view.findViewById(R.id.textView2);
-        t3 = (TextView) view.findViewById(R.id.textView3);
-        Format formatter = new SimpleDateFormat("MMMM");
+        t1 = (TextView) view.findViewById(R.id.textView3);
+        t2 = (TextView) view.findViewById(R.id.textView4);
+        t3 = (TextView) view.findViewById(R.id.textView5);
+        imageView=(ImageView)view.findViewById(R.id.imageView2);
+        Format formatter = new SimpleDateFormat("EEEE,MMMM dd");
         String s = formatter.format(new Date());
 
-        t1.setText(s);
-        Format formatter2 = new SimpleDateFormat("dd");
-        String s2 = formatter2.format(new Date());
+        t3.setText(s);
 
-        t2.setText(s2);
-        Format formatter3 = new SimpleDateFormat("EEEE-yyyy");
+        Format formatter3 = new SimpleDateFormat("MMMM-yyyy");
         String s3 = formatter3.format(new Date());
 
-        t3.setText(s3);
+        t1.setText(s3);
 
 
         b1.setOnClickListener(new View.OnClickListener() {
