@@ -25,6 +25,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.mukesh.image_processing.ImageProcessor;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.IOException;
 
@@ -66,6 +69,12 @@ public class FirebaseActivity extends AppCompatActivity implements View.OnClickL
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
         textViewShow.setOnClickListener(this);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Image clicked",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void showFileChooser() {
@@ -80,11 +89,33 @@ public class FirebaseActivity extends AppCompatActivity implements View.OnClickL
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             filePath = data.getData();
+            CropImage.activity(filePath).setGuidelines(CropImageView.Guidelines.ON).setAspectRatio(1,1).start(this);
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 imageView.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
+            }
+        }
+        if(requestCode==CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE)
+        {
+            CropImage.ActivityResult result=CropImage.getActivityResult(data);
+            if(resultCode==RESULT_OK)
+            {
+                Uri resulturi=result.getUri();
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), resulturi);
+                    imageView.setImageBitmap(bitmap);
+                    ImageProcessor imageProcessor = new ImageProcessor();
+
+                    imageProcessor.doInvert(bitmap);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            else if(resultCode==CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE)
+            {
+                Exception exception=result.getError();
             }
         }
     }
@@ -118,7 +149,8 @@ public class FirebaseActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(getApplicationContext(), "File Uploaded ", Toast.LENGTH_LONG).show();
 
                             //creating the upload object to store uploaded image details
-                            Upload upload = new Upload(editTextName.getText().toString().trim(), taskSnapshot.getDownloadUrl().toString());
+                            Upload upload = new Upload(editTextName.getText().toString().trim(),
+                                    taskSnapshot.getDownloadUrl().toString());
 
                             //adding an upload to firebase database
                             String uploadId = mDatabase.push().getKey();
@@ -137,7 +169,7 @@ public class FirebaseActivity extends AppCompatActivity implements View.OnClickL
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                             //displaying the upload progress
                             double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
-                            progressDialog.setMessage("Uploaded " + ((int) progress) + "%...");
+                            progressDialog.setMessage("Uploading " + ((int) progress) + "%...");
                         }
                     });
         } else {
