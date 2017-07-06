@@ -34,9 +34,6 @@
             android:name="com.vikkyb.Picx.pixectra.imagepicker"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.vikkyb.Picx.pixectra.Bottompanel" />
-        <activity
-            android:name="com.vikkyb.Picx.pixectra.FiveColorChangingTabsActivity"
-            android:theme="@style/AppTheme.TransNav" />
         <activity android:name="com.vikkyb.Picx.pixectra.retrouploader" />
         <activity android:name="com.vikkyb.Picx.pixectra.ShowImagesActivity"></activity>
         <activity android:name=".FirebaseActivity"></activity>

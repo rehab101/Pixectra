@@ -22,8 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/holo_green_light"
-        app:itemIconTint="@color/dot_dark_screen1"
-        app:itemTextColor="@color/colorAccent"
+        android:background="@color/colorAccent"
         app:menu="@menu/bottom_navigation_items"/>
 </RelativeLayout>
